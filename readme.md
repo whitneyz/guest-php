@@ -25,16 +25,16 @@ You can store the messages in a file on your system. You can use the brother of 
 You can either use [json_encode()](https://php.net/json_encode) or [serialize()](https://php.net/serialize) to convert your array to a string to store.
 
 ## Must-have features
-- Posts must have the following attributes:
-    * Title
+- [ ] Posts must have the following attributes:
+    * Title 
     * Date
     * Content
     * Author name
     
-- Use at least 2 classes: PostLoader & Post
-- The messages are sorted from new (top) to old (bottom).
-- Make sure the script can handle [site defacement attacks](https://en.wikipedia.org/wiki/Website_defacement): use [htmlspecialchars()](https://www.php.net/htmlspecialchars)
-- Only show the latest 20 posts.
+- [ ] Use at least 2 classes: PostLoader & Post
+- [ ] The messages are sorted from new (top) to old (bottom).
+- [ ] Make sure the script can handle [site defacement attacks](https://en.wikipedia.org/wiki/Website_defacement): use [htmlspecialchars()](https://www.php.net/htmlspecialchars)
+- [ ] Only show the latest 20 posts.
 
 ## Nice to have features
 - Profanity filter: at the top of your script create an array of "bad" words. If somebody tries to enter a message with those words, their messages gets rejected.
@@ -44,7 +44,7 @@ You can either use [json_encode()](https://php.net/json_encode) or [serialize()]
 - Have an input field where the user can enter how many message he wants to see displayed.
 
 ### Tips & Advice
-- To keep a good overview of the code we recommend separating the view (html code) as much as possible from the PHP code, look at the example.php.
+- [ ] To keep a good overview of the code we recommend separating the view (html code) as much as possible from the PHP code, look at the example.php.
 If you want you can already look into [more advanced theory](https://nl.wikipedia.org/wiki/Model-view-controller-model) for this separation, but it is not required in this exercise.
 
-- Write your footer and header HTML code and `require()` them in your template files in separate files to avoid repeating HTML code.
+- [ ] Write your footer and header HTML code and `require()` them in your template files in separate files to avoid repeating HTML code.
