@@ -4,9 +4,27 @@ declare(strict_types=1);
 ini_set("display_errors", "1");
 ini_set("display_startup_errors", "1");
 error_reporting(E_ALL);
+require 'form-view.php';
+require 'Post.php';
+require 'Postloader.php';
 
 //we are going to use session variables so we need to enable sessions
 session_start();
+
+function whatIsHappening()
+{
+    echo '<h2>$_GET</h2>';
+    var_dump($_GET);
+    echo '<h2>$_POST</h2>';
+    var_dump($_POST);
+    echo '<h2>$_COOKIE</h2>';
+    var_dump($_COOKIE);
+    echo '<h2>$_SESSION</h2>';
+    var_dump($_SESSION);
+}
+
+whatIsHappening();
+
 
 
 
@@ -22,8 +40,5 @@ which will be saved last message on top (class Postloader)
 store the messages in a file on your system (file_put_contents()
 json_encode() or serialize() to convert your array to a string to store.
 */
-require 'form-view.php';
-require 'style.css';
-require 'Post.php';
-require 'Postloader.php'
+
 ?>
