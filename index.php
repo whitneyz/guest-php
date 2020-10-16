@@ -25,13 +25,59 @@ function whatIsHappening()
 
 whatIsHappening();
 
+// define variables and set to empty values
+
+$title = $message = $name ="";
+$date = "";
 
 
 
+/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $title = test_input($_POST["title"]);
+    $date = test_input($_POST["date"]);
+    $message = test_input($_POST["message"]);
+    $name = test_input($_POST["name"]);
+}*/
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $title = ($_POST["title"]);
+    $date = ($_POST["date"]);
+    $message = ($_POST["message"]);
+    $name = ($_POST["name"]);
+
+    //hier controleren of $date een date is en opslaan als datum
+
+}
+    /*function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data); //todo Sicco will explain why this don't work
+        return $data;
+    }*/
 
 
+$guest = new Post($title, $message, $name);
+if(!isset($_POST["title"])){
+    //$title->getTitle();
+    //var_dump($title);
+}
+if(!isset($_POST["date"])){
+    //$date->getDate();
+    //var_dump($title);
+}
+if(!isset($_POST["message"])){
+    //$title->getMessage();
+    //var_dump($title);
+}
+if(!isset($_POST["name"])){
+    //$title->getName();
+    //var_dump($title);
+}
 
-
+    /*<form
+        method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    </form>
+      ?>*/
 
 /*flow
 visitor writes input in fields (class Post???)

@@ -4,19 +4,19 @@ declare(strict_types=1);
 class Post
 {   //attributes/properties
     private string  $title; //should it be array instead of title
-    private DateTimeImmutable $date;
+    private DateTime $date;
     private string  $message;
     private string $name;
 
     /**
      * @param Text $text
      */
-    public function __construct( string $title, DateTimeImmutable $date, string $message, string $name)
+    public function __construct( string $title, string $message, string $name)
     {
         $this->title = $title;
-        $this->date = $date;
+        $this->date = new DateTime();
         $this->message = $message;
-        $name->name = $name;
+        $this->name = $name;
     }
 
     /**
@@ -36,11 +36,11 @@ class Post
     }
 
     /**
-     * @return DateTimeImmutable
+     * @return DateTime
      */
-    public function getDate(): DateTimeImmutable
+    public function getDate(): string
     {
-        return $this->date;
+        return $this->date->format("Y-m-d");
     }
 
     /**

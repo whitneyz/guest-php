@@ -15,15 +15,19 @@
 <form method="post">
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="">
   </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Date</label>
+        <input type="text" name="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+    </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Guest Message</label>
-    <textarea class="form-control" type="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" name="message" type="text" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Your name please</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="">
         <br>
         <button type="submit" class="btn btn-success">Submit</button>
     </div>
@@ -51,7 +55,7 @@
 
 <!--
     * Title todo inputfiled
-    * Date todo Date and time of submitting message automatically
+    * Date todo Date and time of submitting message automatically no it should be a normale inputfield
     * Content todo inputfield
     * Author name inputfield
  *
