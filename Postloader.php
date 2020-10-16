@@ -28,8 +28,12 @@ class Postloader
         //clear the old file I think from the last post???
         //json_encode to the file of the post array
     }
-}
 
+
+public function savePost(){
+
+}
+}
 /*if (isset($pokName)) {
     $pokeIndex = file_get_contents("https://pokeapi.co/api/v2/pokemon/" . $pokName);
     $data = json_decode($pokeIndex, true);

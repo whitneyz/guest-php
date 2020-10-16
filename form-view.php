@@ -17,10 +17,6 @@
     <label for="exampleFormControlInput1">Title</label>
     <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="">
   </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Date</label>
-        <input type="text" name="date" class="form-control" id="exampleFormControlInput1" placeholder="">
-    </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Guest Message</label>
     <textarea class="form-control" name="message" type="text" id="exampleFormControlTextarea1" rows="3"></textarea>
