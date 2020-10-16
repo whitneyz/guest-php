@@ -9,6 +9,7 @@ class Postloader
     //you can also make the method below a constructor
     public function loadAllPosts()
     {
+        array_push($this->posts,);
 
         //open a file
         //jason decode it
@@ -27,12 +28,16 @@ class Postloader
         //add new message from user to the array
         //clear the old file I think from the last post???
         //json_encode to the file of the post array
+
+
     }
 
 
-public function savePost(){
 
-}
+    public function savePost()
+    {
+
+    }
 }
 /*if (isset($pokName)) {
     $pokeIndex = file_get_contents("https://pokeapi.co/api/v2/pokemon/" . $pokName);

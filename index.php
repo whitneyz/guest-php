@@ -4,12 +4,13 @@ declare(strict_types=1);
 ini_set("display_errors", "1");
 ini_set("display_startup_errors", "1");
 error_reporting(E_ALL);
-require 'form-view.php';
+session_start();
+
 require 'Post.php';
 require 'Postloader.php';
 
 //we are going to use session variables so we need to enable sessions
-session_start();
+
 
 function whatIsHappening()
 {
@@ -36,22 +37,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $title = ($_POST["title"]); //=validation
     }
-
-
-    //hier controleren of $date een date is en opslaan als datum
 }
-/*function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data); //todo Sicco will explain why this don't work
-    return $data;
-}*/
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_POST["message"])) {
+        $titleErr = "message required";
+    } else {
+   $message = ($_POST["message"]); //=validation
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_POST["name"])) {
+        $titleErr = "name required";
+    } else {
+        $name= ($_POST["name"]); //=validation
+    }
+}
 
 $titleErr = $messageErr = $nameErr = "";
 
 
 $guest = new Post($title, $message, $name);
+$MyJson = json_encode($guest);
+
+file_put_contents("posts.json", $MyJson);
 
 
 /*if(!isset($_POST["date"])){
@@ -90,5 +100,4 @@ json_encode() or serialize() to convert your array to a string to store.
 //2. if posted form validation
 //3. save in Json (datastructure array) bij v omgekeerd uitlezen
 
-
-?>
+require 'form-view.php';
